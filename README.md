@@ -26,7 +26,7 @@ For the 100-clip human subsets, Camera sampling covers labels and model agreemen
 
 ## 3. Human review and model-assisted extension
 
-For each annotation type, an author familiar with the project reviewed 100 clips. We then extended the audit to all 1,000 clips using **GPT-6-Astra**. We first tried training reviewers without a video-pipeline background, but found that the camera-motion and caption-level rules required substantial training, so an author conducted the human review.
+For each annotation type, an author familiar with the project reviewed 100 clips. **GPT-6-Astra** reviewed the remaining 900 clips. We first tried training reviewers without a video-pipeline background, but found that the camera-motion and caption-level rules required substantial training, so an author conducted the human review.
 
 Reviewers inspect timestamped thumbnails covering each full clip in temporal order, alongside its annotations. Camera review uses frames sampled at **8 fps**; Caption and Tag review use **4 fps**.
 
@@ -61,7 +61,7 @@ A score of $+1$ denotes a correct answer. The rules for $0$ and $-1$ depend on t
 
 | Action description in the caption | Score |
 | --- | ---: |
-| Mentions the target action | +1 |
+| Correctly describes the target action | +1 |
 | Describes other actions but omits the target action | −1 |
 | Describes no actions | 0 |
 
@@ -99,7 +99,7 @@ A clip counts as having an omission if either subjects or actions misses at leas
 
 **CAPability [1] evaluates both correctness and thoroughness, making it suitable for testing whether more detailed captions add accurate and useful information.** We use the video evaluation procedure from its official repository to assess the L0–L3 schema. Level definitions and generation prompts appear in Appendix C.2 and D.2.
 
-We generate captions with **Qwen3.6-27B-FP8** and use **GPT-6-Luna** as a comparison. Both use the same multi-level generation prompt and Qwen-generated Camera metadata. **GPT-6.1-Terra** scores both using the official evaluation prompts.
+We generate captions with **Qwen3.6-27B-FP8** and use **GPT-6-Luna** as a comparison. Both use the same multi-level generation prompt and Camera metadata. **GPT-6.1-Terra** scores both using the official evaluation prompts.
 
 | Level | Qwen Precision | Qwen Coverage | GPT-6-Luna Precision | GPT-6-Luna Coverage |
 | --- | ---: | ---: | ---: | ---: |
@@ -112,7 +112,7 @@ We generate captions with **Qwen3.6-27B-FP8** and use **GPT-6-Luna** as a compar
 
 ## 8. Caption quality on videos from VidaForge-3M
 
-We evaluate **L3 captions, the most detailed level in our framework**, generated with Qwen Camera labels and the Qwen caption model, for correctness and coverage.
+We evaluate **L3 captions, the most detailed level in our framework**, generated with Camera metadata and the Qwen caption model, for correctness and coverage.
 
 | Review scope | Precision | Coverage |
 | --- | ---: | ---: |
@@ -139,7 +139,7 @@ Camera input clearly improves both precision and coverage for camera description
 
 ### 9.2 Videos from VidaForge-3M
 
-Following CAPability's evaluation framework, we build rubric questions and reference answers for action, event, camera movement, and object count for these 1,000 clips. After checking the questions and answers against the video, we use the same questions to score L3 captions with and without Camera input.
+We use the same verified questions to compare L3 captions with and without Camera input on these 1,000 clips.
 
 | Dimension | Precision without Camera | Precision with Camera | Coverage without Camera | Coverage with Camera |
 | --- | ---: | ---: | ---: | ---: |
@@ -158,7 +158,7 @@ Captions without Camera input already have high precision on these clips. Camera
 | Mean duration | 16.84 s | 5.55 s |
 | Maximum duration | 433.73 s | 10.00 s |
 
-CAPability includes longer videos and more complex counting and directional camera-motion questions. Captions without Camera labels score lower; adding Camera input clearly improves camera-description precision and coverage. The VidaForge-3M audit videos have been split into clips of at most 10 seconds, and static cameras are more common. Captions without Camera labels already have high precision; adding Camera expands coverage while reducing precision.
+CAPability includes longer videos and more complex counting and directional camera-motion questions. The VidaForge-3M audit videos have been split into clips of at most 10 seconds, and static cameras are more common.
 
 Task difficulty may help explain this pattern: harder videos may benefit more from explicit camera information, while adding camera detail to simpler clips also creates more opportunities for error.
 
