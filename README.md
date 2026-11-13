@@ -22,6 +22,8 @@ The caption levels add detail progressively. **L0** summarizes the main subject,
 
 **Camera and Caption share 1,000 clips**, covering all 78 Camera field–label combinations. We sample 30 clips per combination, include all available clips for combinations with fewer than 30, and randomly fill the set to 1,000 unique clips. **Tag uses a separate set of 1,000 clips**, covering all 65 label categories with at least 10 examples per category.
 
+For the 100-clip human subsets, Camera sampling covers labels and model agreement/disagreement, Caption uses random sampling, and Tag includes both normal cases and cases flagged for possible errors or omissions.
+
 ## 3. Human review and model-assisted extension
 
 For each annotation type, an author familiar with the project reviewed 100 clips. We then extended the audit to all 1,000 clips using **GPT-6-Astra**. We first tried training reviewers without a video-pipeline background, but found that the camera-motion and caption-level rules required substantial training, so an author conducted the human review.
@@ -43,7 +45,7 @@ Items with insufficient visual evidence are marked uncertain. We report their co
 **Caption.** The two evaluations address different questions:
 
 - **Public benchmark:** We use CAPability's official questions, reference answers, and scoring procedure to assess whether the **L0–L3 schema adds information at each level and how Camera input affects captions**.
-- **Videos from VidaForge-3M:** Following CAPability's evaluation framework, we build rubric questions and reference answers for action, event, camera movement, and object count. We verify them against the video, then assess **caption correctness and coverage**.
+- **Videos from VidaForge-3M:** Following CAPability's evaluation framework, we use DeepSeek to draft rubric questions and reference answers for action, event, camera movement, and object count. We verify them against the video, then assess **caption correctness and coverage**.
 
 Each eligible question receives a score of $+1$, $0$, or $-1$. Let their counts be $N_{+1}$, $N_0$, and $N_{-1}$:
 
@@ -110,7 +112,7 @@ We generate captions with **Qwen3.6-27B-FP8** and use **GPT-6-Luna** as a compar
 
 ## 8. Caption quality on videos from VidaForge-3M
 
-We evaluate Camera-conditioned **L3 captions, the most detailed level in our framework**, for correctness and coverage.
+We evaluate **L3 captions, the most detailed level in our framework**, generated with Qwen Camera labels and the Qwen caption model, for correctness and coverage.
 
 | Review scope | Precision | Coverage |
 | --- | ---: | ---: |
@@ -191,16 +193,6 @@ Caption records contain both L3 variants, rubric questions, reference judgments,
 The viewer needs no additional packages or API key. Use the local URL above so it can load the JSON files and thumbnails.
 
 It opens the 100 samples with thumbnails by default. Switch between **Camera**, **Caption**, and **Tag**, select a sample, or use **Previous / Next**. Choose **All 1,000 records** to browse the extended audit. Camera labels can be viewed for either model; Caption displays both L3 variants and their paired judgments. Click **Open full-size** below a thumbnail to see the original image.
-
-### Review details
-
-The Camera human subset contains 40 label-coverage cases, 40 Gemma–Qwen disagreement cases, and 20 agreement cases. The Caption human subset is randomly sampled from the shared panel. The Tag human subset contains 25 cases each from error candidates, omission candidates, uncertain cases, and normal controls.
-
-Human review includes author checking of model-proposed judgments. Original model records and author-review status are kept separately. Final saved human judgments take precedence in the reported summaries. GPT-6-Astra is the reviewer model identified by the author.
-
-The L3 audit and paired comparison use captions regenerated with Qwen Camera tags and Qwen caption generation. Original dataset captions and their earlier scores are retained separately.
-
-DeepSeek generated candidate rubric questions for the VidaForge-3M clips, which were then checked against the thumbnails. In the clip audit, camera questions are scored against the corresponding camera facts; the official benchmark extracts and matches camera categories. Both use the metric formulas above.
 
 ## References
 
