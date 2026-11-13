@@ -1,6 +1,6 @@
 # VidaForge Annotation Quality Audit
 
-This repository shares quality audits of **Camera, Caption, and Tag** annotations in VidaForge. This initial release contains the audit methods and summary results. Timestamped video thumbnails, item-level judgments, and the interactive viewer will be added next.
+This repository shares quality audits of **Camera, Caption, and Tag** annotations in VidaForge. The materials include timestamped thumbnails for the 100 author-reviewed clips in each audit and full item-level results for all 1,000 clips per audit. An interactive viewer will be added next.
 
 We check whether annotations match the video and cover its main content. We also evaluate **L0–L3 captions on CAPability [1]** and compare captions with and without Camera metadata to assess the caption levels and the role of Camera input.
 
@@ -164,23 +164,17 @@ Task difficulty may help explain this pattern: harder videos may benefit more fr
 
 ## 10. Audit materials
 
-The audit materials cover:
+Each JSON file contains all 1,000 reviewed samples, their annotations, judgments, evidence, and summary statistics. Images are included for the 100 author-reviewed samples in each audit.
 
-- Sample lists: clip IDs, label quotas, random additions, and human-review subsets.
-- Timestamped thumbnails in temporal order.
-- Annotations and caption versions used in each experiment.
-- Item-level judgments, evidence, reviewer sources, and author-review status.
-- An interactive viewer for inspecting each clip and its judgments.
-- Summary CSV/JSON files and analysis scripts.
+| Audit | Full results | Thumbnails for 100 samples |
+| --- | --- | --- |
+| Camera | [data/camera.json](data/camera.json) | [images/camera/](images/camera/) |
+| Caption | [data/caption.json](data/caption.json) | [images/caption/](images/caption/) |
+| Tag | [data/tag.json](data/tag.json) | [images/tag/](images/tag/) |
 
-Planned summary files:
+Samples use simple numbers such as `0001`. Camera and Caption share sample numbers; Tag uses its own numbering. Each sample's `images` field lists its thumbnail paths relative to the repository root. An empty list means thumbnails are not included for that sample. `author_reviewed` marks the selected 100, while `judgment_origin` records whether each label or caption judgment came from a human or a model. Audit explanations are provided in English, translated with DeepSeek V4.1 Flash. Original annotations, caption quotations, and scores are preserved.
 
-| Results | File |
-| --- | --- |
-| Camera, 100 and 1,000 clips | `camera_support_100_1000.json` |
-| Tag, 100 and 1,000 clips | `tag_support_100_1000.json` |
-| L3 captions, 100 and 1,000 clips | `caption_l3_100_1000.json` |
-| Paired Camera-input comparison | `caption_camera_paired_l3.json` |
+Caption records contain both L3 variants, rubric questions, reference judgments, and scores. Tag records include both existing-label checks and subject/action omission checks. Camera records contain both Gemma and Qwen judgments.
 
 ### Review details
 
