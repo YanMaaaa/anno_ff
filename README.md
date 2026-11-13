@@ -202,8 +202,6 @@ The L3 audit and paired comparison use captions regenerated with Qwen Camera tag
 
 DeepSeek generated candidate rubric questions for the VidaForge-3M clips, which were then checked against the thumbnails. In the clip audit, camera questions are scored against the corresponding camera facts; the official benchmark extracts and matches camera categories. Both use the metric formulas above.
 
-Camera support rates include positive and negative labels. In the retained 983-clip model-origin export, removing labels that start with `no` or equal `none` yields support rates of 43.63% for Gemma and 46.80% for Qwen. The retained prediction sets differ between models.
-
 ## References
 
 [1] Liu, Zhihang, et al. “CAPability: A Comprehensive Visual Caption Benchmark for Evaluating Both Correctness and Thoroughness.” NeurIPS, 2025.
