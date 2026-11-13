@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse the Camera, Caption, and Tag annotation audits for VidaForge.">
+  <title>VidaForge · Annotation audit</title>
+  <link rel="stylesheet" href="viewer.css">
+  <script src="viewer.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div><p class="eyebrow">VIDAFORGE</p><h1>Annotation audit</h1></div>
+    <a href="https://github.com/YanMaaaa/anno_ff#readme" target="_blank" rel="noopener">Methods &amp; results ↗</a>
+  </header>
+  <main>
+    <nav class="tasks" aria-label="Annotation type">
+      <button data-task="camera" aria-pressed="true">Camera</button>
+      <button data-task="caption" aria-pressed="false">Caption</button>
+      <button data-task="tag" aria-pressed="false">Tag</button>
+    </nav>
+    <div class="toolbar">
+      <label>Review set<select id="scope"><option value="images">100 with thumbnails</option><option value="all">All 1,000 records</option></select></label>
+      <label>Sample<select id="sample" aria-label="Select sample" disabled></select></label>
+      <div class="navigation"><button id="previous" disabled aria-label="Previous sample">← Previous</button><span id="position"></span><button id="next" disabled aria-label="Next sample">Next →</button></div>
+      <a id="download" href="data/camera.json" download>Download JSON ↓</a>
+    </div>
+    <p id="status" role="status" aria-live="polite">Loading Camera records…</p>
+    <div id="workspace" class="workspace" hidden>
+      <section class="panel visual-panel" aria-labelledby="visual-heading">
+        <div class="panel-heading"><h2 id="visual-heading">Video thumbnails</h2><span id="image-meta"></span></div>
+        <div id="gallery" class="panel-body"></div>
+      </section>
+      <section class="panel" aria-labelledby="review-heading">
+        <div class="panel-heading"><h2 id="review-heading">Annotations &amp; review</h2><span id="review-meta"></span></div>
+        <div id="review" class="panel-body"></div>
+      </section>
+    </div>
+    <noscript>This viewer requires JavaScript. The full audit records are available in the data folder.</noscript>
+  </main>
+  <footer>Read-only audit records · Camera and Caption share sample numbers; Tag uses separate numbers.</footer>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # VidaForge Annotation Quality Audit
 
-This repository shares quality audits of **Camera, Caption, and Tag** annotations in VidaForge. The materials include timestamped thumbnails for the 100 author-reviewed clips in each audit and full item-level results for all 1,000 clips per audit. An interactive viewer will be added next.
+This repository shares quality audits of **Camera, Caption, and Tag** annotations in VidaForge. The materials include timestamped thumbnails for the 100 author-reviewed clips in each audit and full item-level results for all 1,000 clips per audit. A read-only viewer displays the thumbnails alongside annotations and review results.
 
 We check whether annotations match the video and cover its main content. We also evaluate **L0–L3 captions on CAPability [1]** and compare captions with and without Camera metadata to assess the caption levels and the role of Camera input.
 
@@ -175,6 +175,18 @@ Each JSON file contains all 1,000 reviewed samples, their annotations, judgments
 Samples use simple numbers such as `0001`. Camera and Caption share sample numbers; Tag uses its own numbering. Each sample's `images` field lists its thumbnail paths relative to the repository root. An empty list means thumbnails are not included for that sample. `author_reviewed` marks the selected 100, while `judgment_origin` records whether each label or caption judgment came from a human or a model. Audit explanations are provided in English, translated with DeepSeek V4.1 Flash. Original annotations, caption quotations, and scores are preserved.
 
 Caption records contain both L3 variants, rubric questions, reference judgments, and scores. Tag records include both existing-label checks and subject/action omission checks. Camera records contain both Gemma and Qwen judgments.
+
+### Viewer
+
+The [viewer](index.html) opens the 100 samples with thumbnails by default. Switch between Camera, Caption, and Tag, select a sample, or use Previous / Next. Choose **All 1,000 records** to browse the extended audit. Camera labels can be viewed for either model; Caption displays both L3 variants and their paired judgments.
+
+To run locally from the repository folder:
+
+```bash
+python -m http.server 8000 --bind 127.0.0.1
+```
+
+Open **http://localhost:8000/**. The viewer reads the existing JSON files and images and needs no build step or API key. Opening `index.html` directly as a file will not load the JSON files. The same files can be served through GitHub Pages when enabled for this repository.
 
 ### Review details
 
