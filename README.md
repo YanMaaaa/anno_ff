@@ -172,7 +172,7 @@ Each JSON file contains all 1,000 reviewed samples, their annotations, judgments
 | Caption | [data/caption.json](data/caption.json) | [images/caption/](images/caption/) |
 | Tag | [data/tag.json](data/tag.json) | [images/tag/](images/tag/) |
 
-Samples use simple numbers such as `0001`. Camera and Caption share sample numbers; Tag uses its own numbering. Each sample's `images` field lists its thumbnail paths relative to the repository root. An empty list means thumbnails are not included for that sample. `author_reviewed` marks the selected 100, while `judgment_origin` records whether each label or caption judgment came from a human or a model. Audit explanations are provided in English, translated with DeepSeek V4.1 Flash. Original annotations, caption quotations, and scores are preserved.
+Camera and Caption share sample numbers; Tag uses its own numbering.
 
 Caption records contain both L3 variants, rubric questions, reference judgments, and scores. Tag records include both existing-label checks and subject/action omission checks. Camera records contain both Gemma and Qwen judgments.
 
