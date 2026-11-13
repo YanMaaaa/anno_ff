@@ -139,7 +139,7 @@ Camera input clearly improves both precision and coverage for camera description
 
 ### 9.2 Videos from VidaForge-3M
 
-We use the same verified questions to compare L3 captions with and without Camera input on these 1,000 clips.
+For each clip, we use identical verified questions to evaluate captions with and without Camera input.
 
 | Dimension | Precision without Camera | Precision with Camera | Coverage without Camera | Coverage with Camera |
 | --- | ---: | ---: | ---: | ---: |
