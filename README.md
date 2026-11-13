@@ -196,4 +196,4 @@ Camera support rates include positive and negative labels. In the retained 983-c
 
 ## References
 
-[1] Liu, Zhihang, et al. “CAPability: A Comprehensive Visual Caption Benchmark for Evaluating Both Correctness and Thoroughness.” NeurIPS, 2025. https://arxiv.org/abs/2502.14914
+[1] Liu, Zhihang, et al. “CAPability: A Comprehensive Visual Caption Benchmark for Evaluating Both Correctness and Thoroughness.” NeurIPS, 2025.
