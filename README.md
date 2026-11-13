@@ -176,17 +176,21 @@ Samples use simple numbers such as `0001`. Camera and Caption share sample numbe
 
 Caption records contain both L3 variants, rubric questions, reference judgments, and scores. Tag records include both existing-label checks and subject/action omission checks. Camera records contain both Gemma and Qwen judgments.
 
-### Viewer
+### Run the viewer locally
 
-The [viewer](index.html) opens the 100 samples with thumbnails by default. Switch between Camera, Caption, and Tag, select a sample, or use Previous / Next. Choose **All 1,000 records** to browse the extended audit. Camera labels can be viewed for either model; Caption displays both L3 variants and their paired judgments.
+1. Download this repository as a ZIP from the anonymous repository page and extract it, including the `data/` and `images/` folders.
+2. Open a terminal in the extracted folder containing `index.html`. With Python 3 installed, run:
 
-To run locally from the repository folder:
+   ```bash
+   python3 -m http.server 8000 --bind 127.0.0.1
+   ```
 
-```bash
-python -m http.server 8000 --bind 127.0.0.1
-```
+   On Windows, use `py -3 -m http.server 8000 --bind 127.0.0.1`.
+3. Open **http://localhost:8000/** in your browser. Keep the terminal open while browsing; press `Ctrl+C` to stop the server.
 
-Open **http://localhost:8000/**. The viewer reads the existing JSON files and images and needs no build step or API key. Opening `index.html` directly as a file will not load the JSON files. The same files can be served through GitHub Pages when enabled for this repository.
+The viewer needs no additional packages or API key. Use the local URL above so it can load the JSON files and thumbnails.
+
+It opens the 100 samples with thumbnails by default. Switch between **Camera**, **Caption**, and **Tag**, select a sample, or use **Previous / Next**. Choose **All 1,000 records** to browse the extended audit. Camera labels can be viewed for either model; Caption displays both L3 variants and their paired judgments. Click **Open full-size** below a thumbnail to see the original image.
 
 ### Review details
 
