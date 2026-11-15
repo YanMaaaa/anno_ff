@@ -1,13 +1,13 @@
-# VidaForge Review Materials
+# VidaForge review materials
 
-This repository contains the annotation audits and VBench video comparisons discussed in our responses. Open the section for the relevant reviewer question.
+This repository contains our annotation audits and VBench video comparisons. Open the section for the reviewer question you want to check.
 
 <details>
 <summary><strong>DuHq W1 / Q1: What does the early VBench score difference mean?</strong></summary>
 
 ## Question
 
-Does the roughly 0.9 VBench Total advantage of Mixed over Selected correspond to visible differences in early video generation? Sec. 4.2 describes the early training stage; Fig. 16 and Tab. 13 report the dimension scores.
+Does Mixed's roughly 0.9 advantage over Selected in VBench Total correspond to visible differences in early video generation? Sec. 4.2 describes this training stage. Fig. 16 and Tab. 13 give the scores for each dimension.
 
 ## Where the difference comes from
 
@@ -15,15 +15,15 @@ Using VBench's official weights, Imaging Quality and Aesthetic Quality contribut
 
 ## Video selection and review
 
-For each of these six dimensions, we selected two groups with large score gaps: one favoring Mixed and one favoring Selected. The selection used the largest gap in each direction among unused prompts for a fixed training seed. The 12 groups contain four cases from each of three training seeds. Each group compares Mixed, Selected, and Rejected videos from the same prompt.
+We selected two groups with large score gaps for each of these six dimensions: one favoring Mixed and one favoring Selected. For each direction, we chose the largest gap among prompts not already selected, using a fixed training seed. The 12 groups include four cases from each of three training seeds. Each group compares Mixed, Selected, and Rejected videos from the same prompt.
 
-Each video has 49 frames at 16 fps. All frames appear in a timestamped 7×7 grid. The original videos are also included.
+Each video has 49 frames at 16 fps. We include the original videos and timestamped 7×7 grids showing every frame.
 
-One author watched the videos and answered three pairwise questions on each group's selected dimension. DeepSeek V4.1 Flash, GPT-6.1-Terra, and GPT-6-Astra each reviewed the full-frame grids. The models received anonymous A/B/C labels and no VBench scores or generation prompts. The [judge prompt](vbench/judge_prompt.md) defines the six dimensions and allows ties and unjudgeable cases.
+One author watched the videos and made three pairwise comparisons on each group's selected dimension. DeepSeek V4.1 Flash, GPT-6.1-Terra, and GPT-6-Astra each reviewed the full-frame grids. The models received anonymous A/B/C labels and no VBench scores or generation prompts. The [judge prompt](vbench/judge_prompt.md) defines the six dimensions and allows ties and unjudgeable cases.
 
 ## Results
 
-Recipe and score assignments for cases 02, 05, 08, and 12 are awaiting confirmation. The saved A/B/C judgments are complete; the following counts use the current assignments.
+The A/B/C judgments are complete. Recipe and score assignments for cases 02, 05, 08, and 12 still need confirmation; the counts below use the current assignments.
 
 | Reviewer | Same direction as VBench | No clear difference | Opposite direction | Unable to judge |
 | --- | ---: | ---: | ---: | ---: |
@@ -32,7 +32,7 @@ Recipe and score assignments for cases 02, 05, 08, and 12 are awaiting confirmat
 | GPT-6.1-Terra | 6 | 2 | 3 | 1 |
 | GPT-6-Astra | 5 | 7 | 0 | 0 |
 
-Each row compares Mixed and Selected on the dimension used to select each case. A tie means that no clear difference was seen. The cases were selected to inspect large score differences in both directions, so these counts describe the selected examples.
+The counts compare Mixed and Selected on each case's selected dimension. A tie means the reviewer saw no clear difference. The counts describe these examples, chosen for large score gaps in both directions.
 
 ## Files and viewer
 
@@ -44,7 +44,7 @@ Each row compares Mixed and Selected on the dimension used to select each case. 
 | Per-case comparison and counts | [data/summary.json](vbench/data/summary.json), [CSV](vbench/data/comparisons.csv) |
 | Read-only viewer | [index.html](vbench/index.html) |
 
-The viewer shows video playback, full-frame grids, author answers, model rankings, and English comparison notes. Recipe names and judgments start hidden and can be opened separately.
+In the viewer, you can play the videos and enlarge the frame grids, then read the author's answers and the models' rankings and English comparison notes. Recipe names and judgments are hidden at first; you can open them separately.
 
 From the repository root, run:
 
@@ -52,7 +52,7 @@ From the repository root, run:
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open **http://localhost:8000/vbench/** for VBench or **http://localhost:8000/** for annotation audits. No extra packages or API key are needed. Keep the terminal open while browsing and press `Ctrl+C` to stop.
+Open http://localhost:8000/vbench/ for VBench or http://localhost:8000/ for annotation audits. No extra packages or API key are needed. Keep the terminal open while browsing and press `Ctrl+C` to stop.
 
 </details>
 
@@ -60,13 +60,13 @@ Open **http://localhost:8000/vbench/** for VBench or **http://localhost:8000/** 
 <summary><strong>DuHq W2 / Q2: Camera, Caption, and Tag annotation quality</strong></summary>
 
 <!-- ANNOTATION_AUDIT_START -->
-This repository shares quality audits of **Camera, Caption, and Tag** annotations in VidaForge. The materials include timestamped thumbnails for the 100 author-reviewed clips in each audit and full item-level results for all 1,000 clips per audit. A read-only viewer displays the thumbnails alongside annotations and review results.
+We audit VidaForge's Camera, Caption, and Tag annotations. For each audit, we share timestamped thumbnails for the 100 clips reviewed by an author and full item-level results for all 1,000 clips. The read-only viewer shows the thumbnails beside the annotations and judgments.
 
-We check whether annotations match the video and cover its main content. We also evaluate **L0–L3 captions on CAPability [1]** and compare captions with and without Camera metadata to assess the caption levels and the role of Camera input.
+We check whether annotations match the video and cover its main content. On CAPability [1], we evaluate L0 to L3 captions and compare captions with and without Camera metadata to test the caption levels and the effect of Camera input.
 
 ## 1. Annotation schemas
 
-VidaForge-3M provides three types of annotations for each clip. Full definitions and generation prompts appear in the paper's appendices.
+Each VidaForge-3M clip has three types of annotations. The paper's appendices give their full definitions and generation prompts.
 
 | Annotation | Content | Schema | Generation prompt |
 | --- | --- | --- | --- |
@@ -74,25 +74,25 @@ VidaForge-3M provides three types of annotations for each clip. Full definitions
 | Caption | Four levels, L0–L3, from a short summary to a detailed description | Appendix C.2 | Appendix D.2 |
 | Tag | Seven fields: domain, scene, subjects, actions, style, text, and watermark | Appendix C.3 | Appendix D.3 |
 
-We use **Gemma-4-E4B-it** for Camera and **Qwen3.6-27B-FP8** for Caption and Tag.
+We use Gemma-4-E4B-it for Camera and Qwen3.6-27B-FP8 for Caption and Tag.
 
-The caption levels add detail progressively. **L0** summarizes the main subject, action, and scene. **L1** describes the event sequence briefly. **L2** adds temporal changes, subject relations, and background. **L3** gives a more detailed account of the content and camera behavior.
+Each caption level adds detail. L0 summarizes the main subject, action, and scene. L1 describes the event sequence briefly. L2 adds temporal changes, subject relations, and background. L3 gives a more detailed account of the content and camera behavior.
 
 ## 2. Audit samples
 
-**Camera and Caption share 1,000 clips**, covering all 78 Camera field–label combinations. We sample 30 clips per combination, include all available clips for combinations with fewer than 30, and randomly fill the set to 1,000 unique clips. **Tag uses a separate set of 1,000 clips**, covering all 65 label categories with at least 10 examples per category.
+Camera and Caption share 1,000 clips, covering all 78 Camera field and label combinations. We sample 30 clips per combination, include all available clips for combinations with fewer than 30, and randomly fill the set to 1,000 unique clips. Tag uses a separate set of 1,000 clips, covering all 65 label categories with at least 10 examples per category.
 
-For the 100-clip human subsets, Camera sampling covers labels and model agreement/disagreement, Caption uses random sampling, and Tag includes both normal cases and cases flagged for possible errors or omissions.
+For the 100-clip human review sets, Camera sampling covers different labels and cases where the models agree or disagree. Caption uses random sampling. Tag includes both normal cases and cases flagged for possible errors or omissions.
 
 ## 3. Human review and model-assisted extension
 
-For each annotation type, an author familiar with the project reviewed 100 clips. **GPT-6-Astra** reviewed the remaining 900 clips. We first tried training reviewers without a video-pipeline background, but found that the camera-motion and caption-level rules required substantial training, so an author conducted the human review.
+For each annotation type, an author familiar with the project reviewed 100 clips, and GPT-6-Astra reviewed the remaining 900. We first tried training reviewers without a video-pipeline background. The camera-motion and caption-level rules required substantial training, so we chose an author for the human review.
 
-Reviewers inspect timestamped thumbnails covering each full clip in temporal order, alongside its annotations. Camera review uses frames sampled at **8 fps**; Caption and Tag review use **4 fps**.
+Reviewers check the annotations against timestamped thumbnails of the full clip, viewed in time order. Camera review uses frames sampled at 8 fps; Caption and Tag review use 4 fps.
 
 ## 4. Review rules
 
-**Camera.** We check each label against the video. For example, a rightward camera-translation label requires visible evidence of that movement. Each judgment is marked *supported*, *incorrect*, or *uncertain*.
+For Camera, we check each label against the video. For example, a rightward camera-translation label requires visible evidence of that movement. Each judgment is marked *supported*, *incorrect*, or *uncertain*.
 
 $$
 \text{Support rate}=\frac{N_{\text{supported}}}{N_{\text{supported}}+N_{\text{incorrect}}}\times100\%
@@ -100,12 +100,12 @@ $$
 
 Items with insufficient visual evidence are marked uncertain. We report their counts and exclude them from the support-rate denominator.
 
-**Tag.** We check existing labels in all seven fields and separately look for missing main subjects and actions. We report label support and the share of clips with major omissions.
+For Tag, we check existing labels in all seven fields and also look for missing main subjects and actions. We report label support and the share of clips with major omissions.
 
-**Caption.** The two evaluations address different questions:
+We evaluate Caption in two ways:
 
-- **Public benchmark:** We use CAPability's official questions, reference answers, and scoring procedure to assess whether the **L0–L3 schema adds information at each level and how Camera input affects captions**.
-- **Videos from VidaForge-3M:** Following CAPability's evaluation framework, we use DeepSeek to draft rubric questions and reference answers for action, event, camera movement, and object count. We verify them against the video, then assess **caption correctness and coverage**.
+- On the public benchmark, we use CAPability's official questions, reference answers, and scoring procedure to test whether the L0 to L3 schema adds information at each level and how Camera input affects captions.
+- For videos from VidaForge-3M, we follow CAPability's evaluation framework. DeepSeek drafts rubric questions and reference answers for action, event, camera movement, and object count. We check them against the video before assessing caption correctness and coverage.
 
 Each eligible question receives a score of $+1$, $0$, or $-1$. Let their counts be $N_{+1}$, $N_0$, and $N_{-1}$:
 
@@ -117,7 +117,7 @@ $$
 \text{Coverage}=\frac{N_{+1}}{N_{+1}+N_0+N_{-1}}\times100\%
 $$
 
-A score of $+1$ denotes a correct answer. The rules for $0$ and $-1$ depend on the dimension. For Action, we follow CAPability:
+A score of $+1$ means a correct answer. The rules for $0$ and $-1$ depend on the dimension. For Action, we follow CAPability:
 
 | Action description in the caption | Score |
 | --- | ---: |
@@ -125,7 +125,7 @@ A score of $+1$ denotes a correct answer. The rules for $0$ and $-1$ depend on t
 | Describes other actions but omits the target action | −1 |
 | Describes no actions | 0 |
 
-We compute each metric within each dimension, then take an equal-weight average:
+We compute each metric for each dimension, then average the four dimensions equally:
 
 $$
 \text{Overall metric}=\frac{M_{\text{Action}}+M_{\text{Event}}+M_{\text{Camera}}+M_{\text{Count}}}{4}
@@ -133,18 +133,18 @@ $$
 
 ## 5. Camera results
 
-We audit Camera labels from **Gemma-4-E4B-it**, the model used for VidaForge-3M, and use labels generated by **Qwen3.6-27B-FP8** on the same clips as a comparison.
+We audit the Gemma-4-E4B-it Camera labels used in VidaForge-3M and compare them with Qwen3.6-27B-FP8 labels for the same clips.
 
 | Review scope | Gemma-4-E4B-it support rate | Qwen3.6-27B-FP8 support rate |
 | --- | ---: | ---: |
 | 100 clips: human review | 73.90% | 79.05% |
 | 1,000 clips: 100 human + 900 GPT-6-Astra | 76.33% | 77.45% |
 
-**About three quarters of Camera labels are visually supported in both the human and extended audits, giving direct quantitative evidence of their semantic quality.**
+The human and extended audits both find visual support for about three quarters of Camera labels, direct evidence of their semantic quality.
 
 ## 6. Tag results
 
-We check whether existing labels match the video. For **subjects and actions, the two multi-label fields**, we also check for missing main content.
+We check whether existing labels match the video. We also check whether the two multi-label fields, subjects and actions, miss any main content.
 
 | Review scope | Label support rate | Clips with a missing main subject or action |
 | --- | ---: | ---: |
@@ -153,13 +153,13 @@ We check whether existing labels match the video. For **subjects and actions, th
 
 A clip counts as having an omission if either subjects or actions misses at least one main item.
 
-**Existing tags have high visual support, and most clips cover the main content in both multi-label fields, subjects and actions.**
+Existing tags have high visual support. In most clips, both multi-label fields cover the main subjects and actions.
 
 ## 7. CAPability: evaluating the multi-level caption schema
 
-**CAPability [1] evaluates both correctness and thoroughness, making it suitable for testing whether more detailed captions add accurate and useful information.** We use the video evaluation procedure from its official repository to assess the L0–L3 schema. Level definitions and generation prompts appear in Appendix C.2 and D.2.
+CAPability [1] measures caption correctness and thoroughness. We use its official repository's video evaluation procedure to test whether the L0 to L3 schema adds accurate, useful information as captions become more detailed. Appendix C.2 and D.2 define the levels and generation prompts.
 
-We generate captions with **Qwen3.6-27B-FP8** and use **GPT-6-Luna** as a comparison. Both use the same multi-level generation prompt and Camera metadata. **GPT-6.1-Terra** scores both using the official evaluation prompts.
+We compare captions from Qwen3.6-27B-FP8 and GPT-6-Luna, using the same multi-level generation prompt and Camera metadata. GPT-6.1-Terra scores both with the official evaluation prompts.
 
 | Level | Qwen Precision | Qwen Coverage | GPT-6-Luna Precision | GPT-6-Luna Coverage |
 | --- | ---: | ---: | ---: | ---: |
@@ -168,22 +168,22 @@ We generate captions with **Qwen3.6-27B-FP8** and use **GPT-6-Luna** as a compar
 | L2 | 50.38% | 37.99% | 54.54% | 41.31% |
 | L3 | 51.97% | 41.19% | 55.30% | 42.41% |
 
-**Precision and coverage generally improve as descriptions become more detailed from L0 to L3. This supports the schema's ability to add information while maintaining correctness. Qwen performs close to GPT-6-Luna overall.**
+Precision and coverage generally increase from L0 to L3. These results support adding detail while maintaining correctness. Qwen's overall performance is close to GPT-6-Luna's.
 
 ## 8. Caption quality on videos from VidaForge-3M
 
-We evaluate **L3 captions, the most detailed level in our framework**, generated with Camera metadata and the Qwen caption model, for correctness and coverage.
+We evaluate the correctness and coverage of L3, our most detailed captions, generated by Qwen with Camera metadata.
 
 | Review scope | Precision | Coverage |
 | --- | ---: | ---: |
 | 100 clips: human review | 90.83% | 81.29% |
 | 1,000 clips: 100 human + 900 GPT-6-Astra | 89.82% | 79.35% |
 
-**Both audits show high correctness in L3 captions and coverage of most content targeted by the evaluation questions.**
+In both audits, L3 captions score highly on correctness and cover most of the content asked about in the evaluation questions.
 
 ## 9. How Camera input affects captions
 
-We hold the Qwen generator and multi-level prompt fixed, changing only whether Camera labels are supplied as auxiliary information. We compare L3 correctness and coverage across all four dimensions.
+We keep the Qwen model and multi-level prompt fixed and change only whether Camera labels are supplied as extra information. We compare L3 correctness and coverage across all four dimensions.
 
 ### 9.1 CAPability
 
@@ -195,7 +195,7 @@ We hold the Qwen generator and multi-level prompt fixed, changing only whether C
 | Object count | 27.57% | 27.42% | 14.69% | 15.04% |
 | **Four-dimension average** | **49.73%** | **51.97%** | **38.11%** | **41.19%** |
 
-Camera input clearly improves both precision and coverage for camera descriptions, as well as the four-dimension averages. Changes in the other dimensions are small.
+Camera input improves precision and coverage for camera descriptions and raises the four-dimension averages. Changes in the other dimensions are small.
 
 ### 9.2 Videos from VidaForge-3M
 
@@ -209,7 +209,7 @@ For each clip, we use identical verified questions to evaluate captions with and
 | Object count | 98.32% | 98.51% | 91.36% | 91.23% |
 | **Four-dimension average** | **91.27%** | **89.82%** | **78.01%** | **79.35%** |
 
-Captions without Camera input already have high precision on these clips. Camera input expands camera-information coverage but lowers its precision. Changes in the other dimensions are small. Overall, coverage increases while precision decreases.
+Captions without Camera input already have high precision on these clips. Adding Camera input increases coverage of camera details but reduces precision for those details. The other dimensions change little. Overall, coverage rises and precision falls.
 
 ### 9.3 Video properties and interpretation
 
@@ -220,13 +220,13 @@ Captions without Camera input already have high precision on these clips. Camera
 
 CAPability includes longer videos and more complex counting and directional camera-motion questions. The VidaForge-3M audit videos have been split into clips of at most 10 seconds, and static cameras are more common.
 
-Task difficulty may help explain this pattern: harder videos may benefit more from explicit camera information, while adding camera detail to simpler clips also creates more opportunities for error.
+Task difficulty may help explain this pattern. Harder videos may benefit more from explicit camera information, while adding camera detail to simpler clips creates more opportunities for error.
 
-**These results support Camera metadata as a way to improve camera-information coverage. The direct caption audit also shows that Camera-conditioned captions retain high overall correctness.**
+These results support using Camera metadata to cover more camera information. The caption audit also finds high overall correctness in captions generated with Camera input.
 
 ## 10. Audit materials
 
-Each JSON file contains all 1,000 reviewed samples, their annotations, judgments, evidence, and summary statistics. Images are included for the 100 author-reviewed samples in each audit.
+Each JSON file contains all 1,000 reviewed samples with their annotations, judgments, evidence, and summary statistics. Each audit also includes images for the 100 samples reviewed by an author.
 
 | Audit | Full results | Thumbnails for 100 samples |
 | --- | --- | --- |
@@ -248,11 +248,11 @@ Caption records contain both L3 variants, rubric questions, reference judgments,
    ```
 
    On Windows, use `py -3 -m http.server 8000 --bind 127.0.0.1`.
-3. Open **http://localhost:8000/** in your browser. Keep the terminal open while browsing; press `Ctrl+C` to stop the server.
+3. Open http://localhost:8000/ in your browser. Keep the terminal open while browsing; press `Ctrl+C` to stop the server.
 
 The viewer needs no additional packages or API key. Use the local URL above so it can load the JSON files and thumbnails.
 
-It opens the 100 samples with thumbnails by default. Switch between **Camera**, **Caption**, and **Tag**, select a sample, or use **Previous / Next**. Choose **All 1,000 records** to browse the extended audit. Camera labels can be viewed for either model; Caption displays both L3 variants and their paired judgments. Click **Open full-size** below a thumbnail to see the original image.
+By default, the viewer opens the 100 samples with thumbnails. Switch between Camera, Caption, and Tag, select a sample, or use Previous / Next. Choose All 1,000 records to browse the extended audit. Camera labels can be viewed for either model; Caption displays both L3 variants and their paired judgments. Click Open full-size below a thumbnail to see the original image.
 <!-- ANNOTATION_AUDIT_END -->
 
 </details>

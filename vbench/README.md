@@ -1,8 +1,8 @@
-# VBench Visual Comparison
+# VBench visual comparison
 
 ## Question
 
-Does the roughly 0.9 VBench Total advantage of Mixed over Selected correspond to visible differences in early video generation? Sec. 4.2 describes the early training stage; Fig. 16 and Tab. 13 report the dimension scores.
+Does Mixed's roughly 0.9 advantage over Selected in VBench Total correspond to visible differences in early video generation? Sec. 4.2 describes this training stage. Fig. 16 and Tab. 13 give the scores for each dimension.
 
 ## Where the difference comes from
 
@@ -10,15 +10,15 @@ Using VBench's official weights, Imaging Quality and Aesthetic Quality contribut
 
 ## Video selection and review
 
-For each of these six dimensions, we selected two groups with large score gaps: one favoring Mixed and one favoring Selected. The selection used the largest gap in each direction among unused prompts for a fixed training seed. The 12 groups contain four cases from each of three training seeds. Each group compares Mixed, Selected, and Rejected videos from the same prompt.
+We selected two groups with large score gaps for each of these six dimensions: one favoring Mixed and one favoring Selected. For each direction, we chose the largest gap among prompts not already selected, using a fixed training seed. The 12 groups include four cases from each of three training seeds. Each group compares Mixed, Selected, and Rejected videos from the same prompt.
 
-Each video has 49 frames at 16 fps. All frames appear in a timestamped 7×7 grid. The original videos are also included.
+Each video has 49 frames at 16 fps. We include the original videos and timestamped 7×7 grids showing every frame.
 
-One author watched the videos and answered three pairwise questions on each group's selected dimension. DeepSeek V4.1 Flash, GPT-6.1-Terra, and GPT-6-Astra each reviewed the full-frame grids. The models received anonymous A/B/C labels and no VBench scores or generation prompts. The [judge prompt](judge_prompt.md) defines the six dimensions and allows ties and unjudgeable cases.
+One author watched the videos and made three pairwise comparisons on each group's selected dimension. DeepSeek V4.1 Flash, GPT-6.1-Terra, and GPT-6-Astra each reviewed the full-frame grids. The models received anonymous A/B/C labels and no VBench scores or generation prompts. The [judge prompt](judge_prompt.md) defines the six dimensions and allows ties and unjudgeable cases.
 
 ## Results
 
-Recipe and score assignments for cases 02, 05, 08, and 12 are awaiting confirmation. The saved A/B/C judgments are complete; the following counts use the current assignments.
+The A/B/C judgments are complete. Recipe and score assignments for cases 02, 05, 08, and 12 still need confirmation; the counts below use the current assignments.
 
 | Reviewer | Same direction as VBench | No clear difference | Opposite direction | Unable to judge |
 | --- | ---: | ---: | ---: | ---: |
@@ -27,7 +27,7 @@ Recipe and score assignments for cases 02, 05, 08, and 12 are awaiting confirmat
 | GPT-6.1-Terra | 6 | 2 | 3 | 1 |
 | GPT-6-Astra | 5 | 7 | 0 | 0 |
 
-Each row compares Mixed and Selected on the dimension used to select each case. A tie means that no clear difference was seen. The cases were selected to inspect large score differences in both directions, so these counts describe the selected examples.
+The counts compare Mixed and Selected on each case's selected dimension. A tie means the reviewer saw no clear difference. The counts describe these examples, chosen for large score gaps in both directions.
 
 ## Files and viewer
 
@@ -39,7 +39,7 @@ Each row compares Mixed and Selected on the dimension used to select each case. 
 | Per-case comparison and counts | [data/summary.json](data/summary.json), [CSV](data/comparisons.csv) |
 | Read-only viewer | [index.html](index.html) |
 
-The viewer shows video playback, full-frame grids, author answers, model rankings, and English comparison notes. Recipe names and judgments start hidden and can be opened separately.
+In the viewer, you can play the videos and enlarge the frame grids, then read the author's answers and the models' rankings and English comparison notes. Recipe names and judgments are hidden at first; you can open them separately.
 
 From the repository root, run:
 
@@ -47,4 +47,4 @@ From the repository root, run:
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open **http://localhost:8000/vbench/** for VBench or **http://localhost:8000/** for annotation audits. No extra packages or API key are needed. Keep the terminal open while browsing and press `Ctrl+C` to stop.
+Open http://localhost:8000/vbench/ for VBench or http://localhost:8000/ for annotation audits. No extra packages or API key are needed. Keep the terminal open while browsing and press `Ctrl+C` to stop.
