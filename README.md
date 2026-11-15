@@ -23,8 +23,6 @@ One author watched the videos and made three pairwise comparisons on each group'
 
 ## Results
 
-The A/B/C judgments are complete.
-
 | Reviewer | Same direction as VBench | No clear difference | Opposite direction | Unable to judge |
 | --- | ---: | ---: | ---: | ---: |
 | Author | 6 | 5 | 1 | 0 |

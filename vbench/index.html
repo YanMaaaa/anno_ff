@@ -12,7 +12,7 @@
 <button id="prev">← Previous</button><select id="caseSelect" aria-label="Comparison case"></select><button id="next">Next →</button>
 <button id="play">Play all from start</button><button id="pause">Pause all</button>
 <button id="reveal" aria-pressed="false">Show recipes</button>
-<a href="../">Annotation viewer</a><a href="README.md">Methods and results</a>
+<a href="../">Annotation viewer</a><a href="../README.md">Methods and results</a>
 </div></header>
 <main>
 <p id="meta" class="hint"></p><p id="question"></p>
@@ -69,7 +69,7 @@ Promise.all(['manifest','human','models','summary'].map(n=>load(`data/${n}.json`
  for(const [key,name] of Object.entries(names)){const o=node('option',name);o.value=key;$('dimensionSelect').append(o);}
  $('summary').append(table(['Reviewer','Same direction as VBench','No clear difference','Opposite direction','Unable to judge'],Object.entries(s.counts).map(([n,c])=>[n,c.same,c.tie,c.opposite,c.unjudgeable])));
  const requested=m.cases.findIndex(c=>location.hash===`#${c.id}`);if(requested>=0)index=requested;render();
-}).catch(e=>$('error').textContent=`Could not load comparison data: ${e.message}. Start the local HTTP server described in README.md.`);
+}).catch(e=>$('error').textContent=`Could not load comparison data: ${e.message}. Start the local HTTP server described in the repository README.md.`);
 </script>
 </body>
 </html>
