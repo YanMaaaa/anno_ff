@@ -1,13 +1,13 @@
-case_id,metric,recipe_assignment_status,vbench_higher,Author,DeepSeek V4.1 Flash,GPT-6.1-Terra,GPT-6-Astra
-case_01,imaging_quality,consistent,mixed,mixed,tie,tie,mixed
-case_02,imaging_quality,pending,selected,selected,selected,selected,selected
-case_03,aesthetic_quality,consistent,mixed,mixed,selected,selected,tie
-case_04,aesthetic_quality,consistent,selected,tie,selected,selected,tie
-case_05,subject_consistency,pending,mixed,selected,mixed,mixed,mixed
-case_06,subject_consistency,consistent,selected,tie,mixed,unjudgeable,tie
-case_07,background_consistency,consistent,mixed,tie,tie,mixed,tie
-case_08,background_consistency,pending,selected,tie,tie,mixed,tie
-case_09,temporal_flickering,consistent,mixed,mixed,mixed,mixed,mixed
-case_10,temporal_flickering,consistent,selected,tie,tie,tie,tie
-case_11,motion_smoothness,consistent,mixed,mixed,mixed,mixed,mixed
-case_12,motion_smoothness,pending,selected,selected,selected,mixed,tie
+case_id,metric,vbench_higher,Author,DeepSeek V4.1 Flash,GPT-6.1-Terra,GPT-6-Astra
+case_01,imaging_quality,mixed,mixed,tie,tie,mixed
+case_02,imaging_quality,selected,selected,selected,selected,selected
+case_03,aesthetic_quality,mixed,mixed,selected,selected,tie
+case_04,aesthetic_quality,selected,tie,selected,selected,tie
+case_05,subject_consistency,mixed,selected,mixed,mixed,mixed
+case_06,subject_consistency,selected,tie,mixed,unjudgeable,tie
+case_07,background_consistency,mixed,tie,tie,mixed,tie
+case_08,background_consistency,selected,tie,tie,mixed,tie
+case_09,temporal_flickering,mixed,mixed,mixed,mixed,mixed
+case_10,temporal_flickering,selected,tie,tie,tie,tie
+case_11,motion_smoothness,mixed,mixed,mixed,mixed,mixed
+case_12,motion_smoothness,selected,selected,selected,mixed,tie

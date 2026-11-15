@@ -1,11 +1,4 @@
 {
-  "status": "provisional",
-  "pending_cases": [
-    "case_02",
-    "case_05",
-    "case_08",
-    "case_12"
-  ],
   "case_count": 12,
   "counts": {
     "Author": {
@@ -37,7 +30,6 @@
     {
       "case_id": "case_01",
       "metric": "imaging_quality",
-      "recipe_assignment_status": "consistent",
       "vbench_higher": "mixed",
       "Author": "mixed",
       "DeepSeek V4.1 Flash": "tie",
@@ -47,7 +39,6 @@
     {
       "case_id": "case_02",
       "metric": "imaging_quality",
-      "recipe_assignment_status": "pending",
       "vbench_higher": "selected",
       "Author": "selected",
       "DeepSeek V4.1 Flash": "selected",
@@ -57,7 +48,6 @@
     {
       "case_id": "case_03",
       "metric": "aesthetic_quality",
-      "recipe_assignment_status": "consistent",
       "vbench_higher": "mixed",
       "Author": "mixed",
       "DeepSeek V4.1 Flash": "selected",
@@ -67,7 +57,6 @@
     {
       "case_id": "case_04",
       "metric": "aesthetic_quality",
-      "recipe_assignment_status": "consistent",
       "vbench_higher": "selected",
       "Author": "tie",
       "DeepSeek V4.1 Flash": "selected",
@@ -77,7 +66,6 @@
     {
       "case_id": "case_05",
       "metric": "subject_consistency",
-      "recipe_assignment_status": "pending",
       "vbench_higher": "mixed",
       "Author": "selected",
       "DeepSeek V4.1 Flash": "mixed",
@@ -87,7 +75,6 @@
     {
       "case_id": "case_06",
       "metric": "subject_consistency",
-      "recipe_assignment_status": "consistent",
       "vbench_higher": "selected",
       "Author": "tie",
       "DeepSeek V4.1 Flash": "mixed",
@@ -97,7 +84,6 @@
     {
       "case_id": "case_07",
       "metric": "background_consistency",
-      "recipe_assignment_status": "consistent",
       "vbench_higher": "mixed",
       "Author": "tie",
       "DeepSeek V4.1 Flash": "tie",
@@ -107,7 +93,6 @@
     {
       "case_id": "case_08",
       "metric": "background_consistency",
-      "recipe_assignment_status": "pending",
       "vbench_higher": "selected",
       "Author": "tie",
       "DeepSeek V4.1 Flash": "tie",
@@ -117,7 +102,6 @@
     {
       "case_id": "case_09",
       "metric": "temporal_flickering",
-      "recipe_assignment_status": "consistent",
       "vbench_higher": "mixed",
       "Author": "mixed",
       "DeepSeek V4.1 Flash": "mixed",
@@ -127,7 +111,6 @@
     {
       "case_id": "case_10",
       "metric": "temporal_flickering",
-      "recipe_assignment_status": "consistent",
       "vbench_higher": "selected",
       "Author": "tie",
       "DeepSeek V4.1 Flash": "tie",
@@ -137,7 +120,6 @@
     {
       "case_id": "case_11",
       "metric": "motion_smoothness",
-      "recipe_assignment_status": "consistent",
       "vbench_higher": "mixed",
       "Author": "mixed",
       "DeepSeek V4.1 Flash": "mixed",
@@ -147,7 +129,6 @@
     {
       "case_id": "case_12",
       "metric": "motion_smoothness",
-      "recipe_assignment_status": "pending",
       "vbench_higher": "selected",
       "Author": "selected",
       "DeepSeek V4.1 Flash": "selected",

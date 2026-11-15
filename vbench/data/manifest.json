@@ -9,7 +9,6 @@
       "sample_index": 0,
       "direction": "mixed_higher",
       "raw_mixed_minus_selected": 19.871756261708782,
-      "recipe_assignment_status": "consistent",
       "videos": [
         {
           "label": "A",
@@ -211,7 +210,6 @@
       "sample_index": 2,
       "direction": "selected_higher",
       "raw_mixed_minus_selected": -28.535654807577323,
-      "recipe_assignment_status": "pending",
       "videos": [
         {
           "label": "A",
@@ -413,7 +411,6 @@
       "sample_index": 1,
       "direction": "mixed_higher",
       "raw_mixed_minus_selected": 0.11046719551086426,
-      "recipe_assignment_status": "consistent",
       "videos": [
         {
           "label": "A",
@@ -615,7 +612,6 @@
       "sample_index": 2,
       "direction": "selected_higher",
       "raw_mixed_minus_selected": -0.056567639112472534,
-      "recipe_assignment_status": "consistent",
       "videos": [
         {
           "label": "A",
@@ -817,7 +813,6 @@
       "sample_index": 0,
       "direction": "mixed_higher",
       "raw_mixed_minus_selected": 0.07711434053877986,
-      "recipe_assignment_status": "pending",
       "videos": [
         {
           "label": "A",
@@ -1019,7 +1014,6 @@
       "sample_index": 0,
       "direction": "selected_higher",
       "raw_mixed_minus_selected": -0.008219743147492409,
-      "recipe_assignment_status": "consistent",
       "videos": [
         {
           "label": "A",
@@ -1221,7 +1215,6 @@
       "sample_index": 2,
       "direction": "mixed_higher",
       "raw_mixed_minus_selected": 0.032501220703125,
-      "recipe_assignment_status": "consistent",
       "videos": [
         {
           "label": "A",
@@ -1423,7 +1416,6 @@
       "sample_index": 2,
       "direction": "selected_higher",
       "raw_mixed_minus_selected": -0.03136189778645837,
-      "recipe_assignment_status": "pending",
       "videos": [
         {
           "label": "A",
@@ -1625,7 +1617,6 @@
       "sample_index": 2,
       "direction": "mixed_higher",
       "raw_mixed_minus_selected": 0.019565976834764687,
-      "recipe_assignment_status": "consistent",
       "videos": [
         {
           "label": "A",
@@ -1827,7 +1818,6 @@
       "sample_index": 0,
       "direction": "selected_higher",
       "raw_mixed_minus_selected": -0.0011073953965130556,
-      "recipe_assignment_status": "consistent",
       "videos": [
         {
           "label": "A",
@@ -2029,7 +2019,6 @@
       "sample_index": 1,
       "direction": "mixed_higher",
       "raw_mixed_minus_selected": 0.03496338569713342,
-      "recipe_assignment_status": "consistent",
       "videos": [
         {
           "label": "A",
@@ -2231,7 +2220,6 @@
       "sample_index": 2,
       "direction": "selected_higher",
       "raw_mixed_minus_selected": -0.02034435185292227,
-      "recipe_assignment_status": "pending",
       "videos": [
         {
           "label": "A",

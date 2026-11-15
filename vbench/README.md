@@ -18,7 +18,7 @@ One author watched the videos and made three pairwise comparisons on each group'
 
 ## Results
 
-The A/B/C judgments are complete. Recipe and score assignments for cases 02, 05, 08, and 12 still need confirmation; the counts below use the current assignments.
+The A/B/C judgments are complete.
 
 | Reviewer | Same direction as VBench | No clear difference | Opposite direction | Unable to judge |
 | --- | ---: | ---: | ---: | ---: |
