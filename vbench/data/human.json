@@ -1,0 +1,113 @@
+{
+  "reviewer": "One author",
+  "cases": {
+    "case_01": {
+      "metric": "imaging_quality",
+      "answers": {
+        "AB": "B",
+        "AC": "C",
+        "BC": "B"
+      },
+      "note": ""
+    },
+    "case_02": {
+      "metric": "imaging_quality",
+      "answers": {
+        "AB": "B",
+        "AC": "C",
+        "BC": "C"
+      },
+      "note": ""
+    },
+    "case_03": {
+      "metric": "aesthetic_quality",
+      "answers": {
+        "AB": "B",
+        "AC": "tie",
+        "BC": "B"
+      },
+      "note": ""
+    },
+    "case_04": {
+      "metric": "aesthetic_quality",
+      "answers": {
+        "AB": "tie",
+        "AC": "A",
+        "BC": "B"
+      },
+      "note": ""
+    },
+    "case_05": {
+      "metric": "subject_consistency",
+      "answers": {
+        "AB": "A",
+        "AC": "A",
+        "BC": "B"
+      },
+      "note": ""
+    },
+    "case_06": {
+      "metric": "subject_consistency",
+      "answers": {
+        "AB": "tie",
+        "AC": "A",
+        "BC": "B"
+      },
+      "note": ""
+    },
+    "case_07": {
+      "metric": "background_consistency",
+      "answers": {
+        "AB": "tie",
+        "AC": "tie",
+        "BC": "tie"
+      },
+      "note": ""
+    },
+    "case_08": {
+      "metric": "background_consistency",
+      "answers": {
+        "AB": "tie",
+        "AC": "A",
+        "BC": "B"
+      },
+      "note": ""
+    },
+    "case_09": {
+      "metric": "temporal_flickering",
+      "answers": {
+        "AB": "B",
+        "AC": "C",
+        "BC": "C"
+      },
+      "note": ""
+    },
+    "case_10": {
+      "metric": "temporal_flickering",
+      "answers": {
+        "AB": "tie",
+        "AC": "C",
+        "BC": "C"
+      },
+      "note": ""
+    },
+    "case_11": {
+      "metric": "motion_smoothness",
+      "answers": {
+        "AB": "B",
+        "AC": "C",
+        "BC": "C"
+      },
+      "note": ""
+    },
+    "case_12": {
+      "metric": "motion_smoothness",
+      "answers": {
+        "AB": "B",
+        "AC": "C",
+        "BC": "C"
+      },
+      "note": ""
+    }
+  }
+}

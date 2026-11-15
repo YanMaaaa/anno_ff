@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VidaForge · VBench visual comparison</title>
+<style>
+:root{font:16px/1.55 system-ui,sans-serif;color:#e8edf3;background:#10141b}body{margin:0}header{padding:18px 24px;background:#1a2230;border-bottom:1px solid #344156}h1{font-size:24px;margin:0 0 12px}h2{font-size:20px}button,select,a.button{font:inherit;padding:7px 12px;color:inherit;background:#253249;border:1px solid #526279;border-radius:6px;cursor:pointer}button:hover,a.button:hover{background:#354867}button:disabled{opacity:.4;cursor:default}a{color:#b3d6ff}.toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.hint{color:#acbacd;font-size:14px}main{padding:20px 24px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card,.panel{background:#1a2230;border:1px solid #344156;border-radius:9px;padding:14px;min-width:0}.card h2{margin:0 0 10px}video{width:100%;display:block;background:black}.sheet{width:100%;display:block;cursor:zoom-in;margin:12px 0}.button{text-decoration:none;font-size:14px!important}details{margin:20px 0}summary{cursor:pointer;font-weight:600}.panel{margin:18px 0}table{border-collapse:collapse;margin:15px 0;max-width:100%}td,th{text-align:left;padding:8px 14px;border-bottom:1px solid #344156}.scroll{overflow-x:auto}.notice{border-left:3px solid #e2b061;padding:8px 12px;background:#2b251d;color:#ffdda9}#error{white-space:pre-wrap;color:#ffc3bb}dialog{background:#10141b;color:inherit;border:1px solid #526279;border-radius:8px;width:95vw;max-width:95vw;padding:0}dialog::backdrop{background:#000c}.modalbar{display:flex;align-items:center;gap:14px;padding:12px}.zoomscroll{overflow:auto;max-height:82vh}.zoomscroll img{display:block;max-width:none}#zoomTitle{margin-right:auto}@media(max-width:900px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><h1>VBench visual comparison</h1><div class="toolbar">
+<button id="prev">← Previous</button><select id="caseSelect" aria-label="Comparison case"></select><button id="next">Next →</button>
+<button id="play">Play all from start</button><button id="pause">Pause all</button>
+<button id="reveal" aria-pressed="false">Show recipes</button>
+<a href="../">Annotation viewer</a><a href="README.md">Methods and results</a>
+</div></header>
+<main>
+<p id="meta" class="hint"></p><p id="question"></p>
+<p id="mappingStatus" class="notice" hidden></p>
+<div id="cards" class="cards"></div>
+<p class="hint">Each grid contains all 49 frames in time order, read left to right and then top to bottom. Click a grid to enlarge it. Use video playback to inspect continuous motion.</p>
+<details id="promptPanel"><summary>Generation prompt</summary><p id="prompt"></p></details>
+<details id="scoresPanel"><summary>Recipe assignments and VBench scores</summary><div id="scores"></div></details>
+<details id="humanPanel"><summary>Author review</summary><p>The author watched the original videos and answered three pairwise questions on this case's selected dimension.</p><div id="human"></div></details>
+<details id="modelPanel"><summary>Model reviews</summary><div class="toolbar"><label>Judge <select id="modelSelect"></select></label><label>Dimension <select id="dimensionSelect"></select></label></div><p class="hint">The models saw all-frame grids, with anonymous A/B/C labels and no generation prompt or VBench scores. All six rankings are available; comparison notes are shown for the case's selected dimension.</p><div id="model"></div></details>
+<details id="summaryPanel"><summary>Summary and downloads</summary><p id="summaryStatus" class="notice"></p><div id="summary" class="scroll"></div><p>Counts compare Mixed and Selected on the selected dimension of each case. A tie means no clear relative difference; it is kept separate from agreement. These cases were chosen for large score gaps in both directions.</p><p><a href="data/summary.json" download>Summary JSON</a> · <a href="data/comparisons.csv" download>Comparison CSV</a> · <a href="data/human.json" download>Author answers</a> · <a href="data/human_pairs.csv" download>Author CSV</a> · <a href="data/models.json" download>Model rankings and notes</a> · <a href="judge_prompt.md">Judge prompt</a></p></details>
+<div id="error" role="alert"></div>
+</main>
+<dialog id="zoom"><div class="modalbar"><strong id="zoomTitle"></strong><button id="fit">Fit width</button><button id="native">Original size</button><button id="closeZoom">Close ×</button></div><div class="zoomscroll"><img id="zoomImage" alt="All 49 frames with timestamps"></div></dialog>
+<script>
+const $=id=>document.getElementById(id);
+const names={imaging_quality:'Imaging Quality',aesthetic_quality:'Aesthetic Quality',subject_consistency:'Subject Consistency',background_consistency:'Background Consistency',temporal_flickering:'Temporal Flickering',motion_smoothness:'Motion Smoothness'};
+const questions={imaging_quality:'Which video has clearer images and fewer visible artifacts?',aesthetic_quality:'Which video has a more coherent composition, color scheme, and lighting?',subject_consistency:'Which video retains the main visible form more consistently over time?',background_consistency:'Which video retains a more consistent background layout over time?',temporal_flickering:'Which video has less sudden or alternating flicker in brightness, color, or texture?',motion_smoothness:'Which video has smoother visible movement or deformation?'};
+let manifest,human,models,summary,index=0,revealed=false;
+function node(tag,text){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;return e;}
+function item(){return manifest.cases[index];}
+function label(name){const v=item().videos.find(v=>v.label===name);return revealed?`${name} · ${v.recipe[0].toUpperCase()+v.recipe.slice(1)}`:name;}
+function table(head,rows){const t=node('table'),h=node('tr');for(const c of head)h.append(node('th',c));t.append(h);for(const values of rows){const r=node('tr');for(const v of values)r.append(node('td',v));t.append(r);}return t;}
+function renderHuman(){const r=human.cases[item().id];const rows=Object.entries(r.answers).map(([pair,a])=>[`${label(pair[0])} vs ${label(pair[1])}`,a==='tie'?'No clear difference':a==='unjudgeable'?'Unable to judge':`${label(a)} is better`]);$('human').replaceChildren(table(['Pair','Author judgment'],rows));if(r.note)$('human').append(node('p',r.note));}
+function renderModel(){const d=models.models[$('modelSelect').value][item().id].dimensions[$('dimensionSelect').value];const area=$('model');area.replaceChildren(node('p',d.ranking.length?d.ranking.map(t=>t.map(label).join(' = ')).join(' > '):'Unable to rank'));for(const u of d.unjudgeable)area.append(node('p',`${label(u.label)}: unable to judge. ${u.reason}`));if(d.comparison)area.append(node('p',d.comparison));}
+function setLabels(){
+ $('reveal').textContent=revealed?'Hide recipes':'Show recipes';$('reveal').setAttribute('aria-pressed',String(revealed));
+ document.querySelectorAll('.card h2').forEach((heading,i)=>heading.textContent=label(item().videos[i].label));renderHuman();renderModel();
+}
+function render(){
+ document.querySelectorAll('video').forEach(v=>v.pause());revealed=false;const c=item();$('caseSelect').value=String(index);$('prev').disabled=index===0;$('next').disabled=index===manifest.cases.length-1;
+ for(const id of ['promptPanel','scoresPanel','humanPanel','modelPanel','summaryPanel'])$(id).open=false;
+ $('meta').textContent=`${c.id} · ${index+1} / ${manifest.cases.length} · ${names[c.metric]} · 49 frames per video`;
+ $('question').textContent=questions[c.metric];$('prompt').textContent=c.prompt;
+ $('mappingStatus').hidden=c.recipe_assignment_status!=='pending';$('mappingStatus').textContent='Recipe-to-score assignment for this case is awaiting confirmation. The saved A/B/C videos and judgments are unchanged.';
+ $('cards').replaceChildren();
+ for(const v of c.videos){
+  const card=node('section');card.className='card';card.append(node('h2',v.label));const player=node('video');player.src=v.video;player.controls=true;player.muted=true;player.loop=true;player.playsInline=true;player.preload='metadata';card.append(player);
+  const img=node('img');img.className='sheet';img.src=v.sheet;img.alt=`${v.label}: all 49 frames in time order`;img.onclick=()=>{$('zoomImage').src=v.sheet;$('zoomImage').style.width='100%';$('zoomTitle').textContent=`${c.id} · ${label(v.label)}`;$('zoom').showModal();};card.append(img);
+  const a=node('a','Open original video');a.className='button';a.href=v.video;a.target='_blank';a.rel='noopener';card.append(a);$('cards').append(card);
+ }
+ $('scores').replaceChildren(node('p',`Selected for a large ${c.direction==='mixed_higher'?'Mixed-over-Selected':'Selected-over-Mixed'} score gap. Assignment status: ${c.recipe_assignment_status==='pending'?'pending confirmation':'consistent with source directory names'}.`),table(['Label','Assigned recipe','Raw score'],c.videos.map(v=>[v.label,v.recipe,v.raw_score.toFixed(6)])),node('p','Imaging Quality raw scores use a 0–100 scale; the other five dimensions use 0–1. These scores are not added across dimensions.'));
+ $('dimensionSelect').value=c.metric;setLabels();history.replaceState(null,'',`#${c.id}`);
+}
+$('prev').onclick=()=>{if(index>0){index--;render();}};$('next').onclick=()=>{if(index<manifest.cases.length-1){index++;render();}};$('caseSelect').onchange=e=>{index=Number(e.target.value);render();};
+$('reveal').onclick=()=>{revealed=!revealed;if(!revealed)$('scoresPanel').open=false;setLabels();};
+$('modelSelect').onchange=renderModel;$('dimensionSelect').onchange=renderModel;
+$('play').onclick=async()=>{const v=[...document.querySelectorAll('video')];v.forEach(x=>{x.pause();x.currentTime=0;});await Promise.all(v.map(x=>x.play().catch(()=>{})));};$('pause').onclick=()=>document.querySelectorAll('video').forEach(v=>v.pause());
+$('closeZoom').onclick=()=>$('zoom').close();$('fit').onclick=()=>$('zoomImage').style.width='100%';$('native').onclick=()=>$('zoomImage').style.width=$('zoomImage').naturalWidth+'px';
+document.addEventListener('keydown',e=>{if(!manifest||$('zoom').open||e.target.tagName==='SELECT')return;if(e.key==='ArrowLeft')$('prev').click();if(e.key==='ArrowRight')$('next').click();});
+async function load(path){const r=await fetch(path);if(!r.ok)throw Error(`${path}: HTTP ${r.status}`);return r.json();}
+Promise.all(['manifest','human','models','summary'].map(n=>load(`data/${n}.json`))).then(([m,h,j,s])=>{
+ manifest=m;human=h;models=j;summary=s;
+ m.cases.forEach((c,i)=>{const o=node('option',`${c.id}: ${names[c.metric]}`);o.value=String(i);$('caseSelect').append(o);});
+ for(const name of Object.keys(models.models))$('modelSelect').append(node('option',name));
+ for(const [key,name] of Object.entries(names)){const o=node('option',name);o.value=key;$('dimensionSelect').append(o);}
+ $('summaryStatus').hidden=s.status!=='provisional';$('summaryStatus').textContent=`Current assignments are provisional for ${s.pending_cases.join(', ')}. Counts below use the current manifest.`;
+ $('summary').append(table(['Reviewer','Same direction as VBench','No clear difference','Opposite direction','Unable to judge'],Object.entries(s.counts).map(([n,c])=>[n,c.same,c.tie,c.opposite,c.unjudgeable])));
+ const requested=m.cases.findIndex(c=>location.hash===`#${c.id}`);if(requested>=0)index=requested;render();
+}).catch(e=>$('error').textContent=`Could not load comparison data: ${e.message}. Start the local HTTP server described in README.md.`);
+</script>
+</body>
+</html>

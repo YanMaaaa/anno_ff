@@ -1,0 +1,2860 @@
+{
+  "models": {
+    "DeepSeek V4.1 Flash": {
+      "case_01": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "B and C have clearer local structure; A is softer and more blurred overall. B and C differ little, mainly in contrast and color saturation."
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              },
+              {
+                "label": "B",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              },
+              {
+                "label": "C",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              }
+            ]
+          }
+        }
+      },
+      "case_02": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "C retains local structure and detail best, followed by B, which has less smearing than A. A has the most obvious blur and loss of highlight detail."
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "Visible movement or deformation is too small to reliably judge motion continuity at this resolution."
+              },
+              {
+                "label": "B",
+                "reason": "Visible movement or deformation is too small to reliably judge motion continuity at this resolution."
+              },
+              {
+                "label": "C",
+                "reason": "Visible movement or deformation is too small to reliably judge motion continuity at this resolution."
+              }
+            ]
+          }
+        }
+      },
+      "case_03": {
+        "dimensions": {
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "A"
+              ],
+              [
+                "C"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "A has clearer separation and layering of color regions. C is softer, but its central region is visually heavy. B looks the muddiest."
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "imaging_quality": {
+            "ranking": [
+              [
+                "A"
+              ],
+              [
+                "C"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              },
+              {
+                "label": "B",
+                "reason": "Persistent blur and trails obscure motion detail."
+              }
+            ]
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A"
+              ],
+              [
+                "C"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_04": {
+        "dimensions": {
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "B and C have more coherent color and light-dark relationships. Color trails and blur make A slightly less coordinated overall."
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_05": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "B has the most complete animal-like form and plausible displacement. C is nearly static, so its shape remains stable. Deformation and merging of the regions in A make its structure less continuous."
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_06": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "The dark central forms and lower-left regions in B and C are more stable. A has more obvious jitter in edges and internal texture."
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_07": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "A"
+              ],
+              [
+                "C"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "All three backgrounds consist of static, disordered color regions. Their spatial layouts remain stable from 0 to 3 seconds. The main differences concern clarity rather than consistency."
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              },
+              {
+                "label": "B",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              },
+              {
+                "label": "C",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              }
+            ]
+          }
+        }
+      },
+      "case_08": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "A"
+              ],
+              [
+                "C"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "B",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "C",
+                "reason": "There is no independent subject that can be reliably tracked."
+              }
+            ]
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "All three background layouts remain stable. No sudden replacement or spatial misalignment is visible between frames, so they are tied."
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              },
+              {
+                "label": "B",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              },
+              {
+                "label": "C",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              }
+            ]
+          }
+        }
+      },
+      "case_09": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "B has the steadiest brightness and color between frames. C has strong contrast but stable color regions. The bright white regions in A fluctuate more between frames."
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [
+              {
+                "label": "B",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              },
+              {
+                "label": "C",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              }
+            ]
+          }
+        }
+      },
+      "case_10": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "None of the three shows obvious frame-to-frame flicker at the supplied resolution. The differences are not clear, so they are tied."
+          },
+          "motion_smoothness": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "Visible movement or deformation is too small to reliably judge motion continuity at this resolution."
+              },
+              {
+                "label": "B",
+                "reason": "Visible movement or deformation is too small to reliably judge motion continuity at this resolution."
+              },
+              {
+                "label": "C",
+                "reason": "Visible movement or deformation is too small to reliably judge motion continuity at this resolution."
+              }
+            ]
+          }
+        }
+      },
+      "case_11": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "C has the most continuous slight movement, followed by A. Blur and local jumps make B's movement less smooth."
+          }
+        }
+      },
+      "case_12": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "C has the clearest and most continuous deformation, followed by A. B looks softer and has the weakest motion detail."
+          }
+        }
+      }
+    },
+    "GPT-6.1-Terra": {
+      "case_01": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "The main color-region boundaries in B and C are slightly clearer than in A. All three have obvious broken structure and smearing; B and C are difficult to separate."
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_02": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "C has relatively clear boundaries between its main color regions. A is more blurred, while B has the least distinct structure and light-dark layers. All three have obvious generation artifacts."
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "B",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "C",
+                "reason": "There is no independent subject that can be reliably tracked."
+              }
+            ]
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_03": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "C has more unified colors and large-scale layout. A and B both contain fragmented bright colors and dark structures, with no clear preference between them."
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_04": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "B's diagonal layout and C's large warm-colored regions are relatively focused. A's bright fragments are more crowded. B and C have different strengths, with no clear gap."
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A"
+              ],
+              [
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "Visible movement or deformation is too small to reliably judge motion continuity at this resolution."
+              }
+            ]
+          }
+        }
+      },
+      "case_05": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [
+              {
+                "label": "C",
+                "reason": "There is no independent subject that can be reliably tracked."
+              }
+            ],
+            "comparison": "B retains its reddish-brown main region for longer. A's form blends into the surrounding texture earlier."
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C",
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_06": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "B",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "C",
+                "reason": "There is no independent subject that can be reliably tracked."
+              }
+            ],
+            "comparison": "None of the three has a trackable subject, so they cannot be compared on this dimension."
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_07": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "The large background regions can be tracked in all three videos. Small regions around A change more visibly. There is no clear difference between B and C."
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [
+              {
+                "label": "B",
+                "reason": "Visible movement or deformation is too small to reliably judge motion continuity at this resolution."
+              },
+              {
+                "label": "C",
+                "reason": "Visible movement or deformation is too small to reliably judge motion continuity at this resolution."
+              }
+            ]
+          }
+        }
+      },
+      "case_08": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "B has a relatively stable arrangement of large color regions. Lower textures change more in A and C, although the main regions remain trackable in all three."
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_09": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "B",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "C",
+                "reason": "There is no independent subject that can be reliably tracked."
+              }
+            ]
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "C's large regions have relatively stable brightness. Fine textures on the left change more between frames in B and A, over a larger area in A."
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "C",
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_10": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "B",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "C",
+                "reason": "There is no independent subject that can be reliably tracked."
+              }
+            ]
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "None shows obvious frame-to-frame flicker across the whole image. Differences in local texture changes are too small to support a reliable ranking."
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_11": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "B",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "C",
+                "reason": "There is no independent subject that can be reliably tracked."
+              }
+            ]
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "C's color regions deform more continuously. B has some local jumps, while A has more obvious jumps among fragments."
+          }
+        }
+      },
+      "case_12": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "C",
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "B",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "C",
+                "reason": "There is no independent subject that can be reliably tracked."
+              }
+            ]
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C",
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "B's outlines change more gradually. C has continuous displacement but more edge deformation. A has more irregular local changes."
+          }
+        }
+      }
+    },
+    "GPT-6-Astra": {
+      "case_01": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "B has the clearest separation of major color regions and local structure. C has clearer foreground boundaries than A, but both contain substantial smeared detail. All three have distorted structure; sharper edges are not treated as complete object structure."
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_02": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "A",
+                "C"
+              ],
+              [
+                "B"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "A and C both have obvious structural artifacts, with insufficient evidence to separate them. B additionally shows stronger overall washout, blur, and mixed textures."
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_03": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "The three have similar basic layouts and color schemes. B is more distinct but crowded; C is softer but loosely organized; A does not show clearly better visual organization. They are tied."
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_04": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "C has more unified colors and light-dark organization. A and B have similar layouts, and strong local highlights make both look cluttered, with no clear preference between them."
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A"
+              ],
+              [
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_05": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "B's region colors and outlines are easiest to match continuously. C shows gradual merging, while A has more obvious broken and fused outlines. The comparison tracks visible regions without assuming an object category."
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_06": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "For the reliably trackable central abstract form, all three retain the main outline and color relationships, without obvious identity replacement. Changes in surrounding textures should not directly count as the subject disappearing."
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_07": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "The surrounding block-like layouts are stable in all three. Background replacement or spatial distortion does not differ clearly enough to rank them."
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "unjudgeable": [
+              {
+                "label": "C",
+                "reason": "The video is nearly static; visible displacement or deformation is insufficient to judge motion smoothness."
+              }
+            ]
+          }
+        }
+      },
+      "case_08": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "A",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "All three preserve the same large-scale spatial relationships while showing slow non-rigid distortion. There is no clear difference in sudden replacement or layout jumps."
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_09": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "A has more visible local texture flicker. The large color regions in B and C are relatively stable. At the contact-sheet resolution, their subtle flicker cannot be separated further."
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_10": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "At the scale visible in the contact sheets, none shows obvious sudden or alternating flicker. Fine texture differences are insufficient to separate their rankings."
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          }
+        }
+      },
+      "case_11": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "C's trackable outlines deform more continuously. A and B both show overall gradual changes with local restructuring, without a clear difference in motion continuity. All three have visible deformation; C's advantage does not come from being static."
+          }
+        }
+      },
+      "case_12": {
+        "dimensions": {
+          "imaging_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "aesthetic_quality": {
+            "ranking": [
+              [
+                "C"
+              ],
+              [
+                "B"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "subject_consistency": {
+            "ranking": [],
+            "unjudgeable": [
+              {
+                "label": "A",
+                "reason": "No subject can be separated from the background and tracked over time."
+              },
+              {
+                "label": "B",
+                "reason": "There is no independent subject that can be reliably tracked."
+              },
+              {
+                "label": "C",
+                "reason": "Environmental regions can be tracked, but there is no distinct independent subject."
+              }
+            ]
+          },
+          "background_consistency": {
+            "ranking": [
+              [
+                "B",
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "temporal_flickering": {
+            "ranking": [
+              [
+                "B"
+              ],
+              [
+                "C"
+              ],
+              [
+                "A"
+              ]
+            ],
+            "unjudgeable": []
+          },
+          "motion_smoothness": {
+            "ranking": [
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ],
+            "unjudgeable": [],
+            "comparison": "All three show visible, frame-by-frame continuous deformation. The contact sheets do not show clear enough differences in displacement jumps to rank motion smoothness. Texture flicker and structural blur are not directly treated as evidence of unsmooth motion."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "dimension": "subject consistency",
+    "mean_delta": 1.008645919401701,
+    "total_contribution": 0.12414103623405552
+  },
+  {
+    "dimension": "background consistency",
+    "mean_delta": 0.5807711006116847,
+    "total_contribution": 0.07147952007528427
+  },
+  {
+    "dimension": "temporal flickering",
+    "mean_delta": 0.5329457108371258,
+    "total_contribution": 0.06559331825687703
+  },
+  {
+    "dimension": "motion smoothness",
+    "mean_delta": 0.4611767908471762,
+    "total_contribution": 0.056760220411960154
+  },
+  {
+    "dimension": "aesthetic quality",
+    "mean_delta": 0.4892684866450594,
+    "total_contribution": 0.060217659894776544
+  },
+  {
+    "dimension": "imaging quality",
+    "mean_delta": 3.2827048806867722,
+    "total_contribution": 0.40402521608452585
+  },
+  {
+    "dimension": "dynamic degree",
+    "mean_delta": 0.7716049382716044,
+    "total_contribution": 0.04748338081671412
+  },
+  {
+    "dimension": "object class",
+    "mean_delta": 0.23734177215189867,
+    "total_contribution": 0.005274261603375526
+  },
+  {
+    "dimension": "multiple objects",
+    "mean_delta": 0.008468834688346888,
+    "total_contribution": 0.00018819632640770863
+  },
+  {
+    "dimension": "human action",
+    "mean_delta": 0.6666666666666666,
+    "total_contribution": 0.014814814814814815
+  },
+  {
+    "dimension": "color",
+    "mean_delta": 3.223862942612943,
+    "total_contribution": 0.07164139872473206
+  },
+  {
+    "dimension": "spatial relationship",
+    "mean_delta": 0.0761459787652676,
+    "total_contribution": 0.0016921328614503913
+  },
+  {
+    "dimension": "scene",
+    "mean_delta": 0.34373964852601285,
+    "total_contribution": 0.007638658856133619
+  },
+  {
+    "dimension": "appearance style",
+    "mean_delta": 1.3756243872708893,
+    "total_contribution": 0.030569430828241987
+  },
+  {
+    "dimension": "temporal style",
+    "mean_delta": -1.608306321325987,
+    "total_contribution": -0.035740140473910824
+  },
+  {
+    "dimension": "overall consistency",
+    "mean_delta": -1.4078608985872414,
+    "total_contribution": -0.03128579774638314
+  }
+]
